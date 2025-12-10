@@ -495,7 +495,7 @@
       "plot": "plot",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "lightsaber-pcb.step",
       "svg": "",
       "vrml": ""
     },

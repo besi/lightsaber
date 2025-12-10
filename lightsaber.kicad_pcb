@@ -41,6 +41,7 @@
 	(setup
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
+		(grid_origin 99.5 22.5)
 		(pcbplotparams
 			(layerselection 0x0001000_fffffffe)
 			(plot_on_all_layers_selection 0x0000000_00000000)
@@ -418,7 +419,7 @@
 			)
 		)
 		(property "Footprint" "c3-pico:c3-pico"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4771b971-5883-438e-bf5e-80bc93f88b3a")
@@ -430,7 +431,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.wemos.cc/en/latest/c3/c3_pico.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "caa0cfe0-98e4-4600-b530-822c15f91e42")
@@ -442,7 +443,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dd278d62-6a88-4273-9013-6c387bb7fcc4")
@@ -1832,7 +1833,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R3"
-			(at 0 1.65 360)
+			(at 0 1.65 0)
 			(layer "B.SilkS")
 			(uuid "c422d77f-e633-4d0d-8a75-294f5cd853de")
 			(effects
@@ -1844,7 +1845,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 0 -1.65 360)
+			(at 0 -1.65 0)
 			(layer "B.Fab")
 			(uuid "92affbe2-d9e7-46cd-b0ab-ee8f734bf18b")
 			(effects
@@ -2003,7 +2004,7 @@
 			(uuid "763c1f5d-d468-4565-b3e8-cbfa097c0b69")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "3fc260fa-515b-440b-90d8-1f7cac9d5390")
 			(effects
@@ -2076,7 +2077,7 @@
 			)
 		)
 		(property "Footprint" "neopixel-strip:neopixel-strip"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e742aa16-1f73-46a5-90f2-61f02f711c3e")
@@ -2089,7 +2090,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "95775493-9ca0-42ac-8406-ee29d9803e16")
@@ -2102,7 +2103,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ef0db42a-e48e-4283-a1f5-ca99813f8262")
