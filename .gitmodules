@@ -1,0 +1,12 @@
+[submodule "lib/c3-pico"]
+	path = lib/c3-pico
+	url = https://github.com/besi/kicad-c3-pico
+[submodule "lib/pts636"]
+	path = lib/pts636
+	url = https://github.com/besi/kicad-pts636
+[submodule "lib/as12ap"]
+	path = lib/as12ap
+	url = https://github.com/besi/kicad-as12ap
+[submodule "lib/neopixel-strip"]
+	path = lib/neopixel-strip
+	url = https://github.com/besi/kicad-neopixel-strip

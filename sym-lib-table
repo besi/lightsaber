@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "c3-pico")(type "KiCad")(uri "${KIPRJMOD}/lib/c3-pico/c3-pico.kicad_sym")(options "")(descr ""))
+  (lib (name "com-09806")(type "KiCad")(uri "${KIPRJMOD}/lib/com-09806/com-09806.kicad_sym")(options "")(descr ""))
+  (lib (name "neopixel-strip")(type "KiCad")(uri "${KIPRJMOD}/lib/neopixel-strip/neopixel-strip.kicad_sym")(options "")(descr ""))
+)
