@@ -1,0 +1,97 @@
+import machine
+adc = machine.ADC(0)
+import time
+from machine import Pin, PWM
+from neopixel import NeoPixel
+from time import sleep
+
+pixel_count = 74
+BUTTON_PRESSED = 0
+animate_delay = 0.015
+strip_pin = 2
+color = (0,0,1)
+purple = (128,0,128)
+blue = (0,0,255)
+red = (255,0,0)
+yellow = (200,120,0)
+green = (0,255,0)
+
+color_index = 0
+colors = [blue, red, yellow, purple, green]
+current_color = colors[color_index]
+last_color = colors[len(colors)-1]
+
+np = NeoPixel(Pin(strip_pin), pixel_count)
+np1 = NeoPixel(Pin(7),1) 
+button = Pin(4, Pin.IN, Pin.PULL_UP)
+
+
+def next_color():
+    global color_index
+    color_index += 1
+    color_index = color_index % len(colors)
+    return colors[color_index]
+    
+    
+def clear(fade = False):
+    if fade:
+        c = last_color
+        for x in range(max(c)+1):
+            n = ((max(c[0] - x,0), max(c[1] - x, 0), max(c[2] - x, 0) ))
+            np.fill(n)
+            np.write()
+            sleep(.001)
+    else:
+        np.fill((0,0,0))
+        np1.fill((0,0,0))
+        np.write()
+        np1.write()
+
+
+def animate(c):
+    for x in range(pixel_count - 1):
+        np[x] = c
+        np[pixel_count -1 - x] = c
+        np.write()
+        sleep(animate_delay)
+        
+def wait_for_button():
+    while button() != BUTTON_PRESSED:
+        sleep(.01)
+
+def dim(c):
+    f = 25
+    return (( max(int(c[0]/f),0), max(int(c[1]/f),0), max(int(c[2]/f),0) ))
+ 
+def swap(c):
+    return ((c[1], c[0], c[2]))
+
+def status(c):
+    np1.fill(swap(c))
+    np1.write()
+ 
+np.fill(color)
+np.write()
+
+clear()
+state = 'start'
+status((1,1,1))
+
+while True:
+    if state == 'start':
+        wait_for_button()
+        animate(current_color)
+        state = 'light'
+        print("state = light")
+        last_color = current_color
+        current_color = next_color()
+        status(dim(current_color))
+
+
+    elif state == 'light':
+        wait_for_button()
+        clear(True)
+        state = 'start'
+        print("state = start")
+        sleep(.2)
+    sleep(.1)
