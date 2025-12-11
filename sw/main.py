@@ -18,6 +18,7 @@ green = (0,255,0)
 
 color_index = 0
 colors = [blue, red, yellow, purple, green]
+
 current_color = colors[color_index]
 last_color = colors[len(colors)-1]
 
@@ -26,11 +27,14 @@ np1 = NeoPixel(Pin(7),1)
 button = Pin(4, Pin.IN, Pin.PULL_UP)
 
 
-def next_color():
+def next_color(store = True):
     global color_index
-    color_index += 1
-    color_index = color_index % len(colors)
-    return colors[color_index]
+    index = color_index
+    index += 1
+    index = index % len(colors)
+    if store:
+        color_index = index
+    return colors[index]
     
     
 def clear(fade = False):
@@ -40,7 +44,6 @@ def clear(fade = False):
             n = ((max(c[0] - x,0), max(c[1] - x, 0), max(c[2] - x, 0) ))
             np.fill(n)
             np.write()
-            sleep(.001)
     else:
         np.fill((0,0,0))
         np1.fill((0,0,0))
@@ -60,7 +63,7 @@ def wait_for_button():
         sleep(.01)
 
 def dim(c):
-    f = 25
+    f = 100
     return (( max(int(c[0]/f),0), max(int(c[1]/f),0), max(int(c[2]/f),0) ))
  
 def swap(c):
@@ -70,22 +73,19 @@ def status(c):
     np1.fill(swap(c))
     np1.write()
  
-np.fill(color)
-np.write()
-
 clear()
 state = 'start'
-status((1,1,1))
+status(dim(current_color))
 
 while True:
     if state == 'start':
         wait_for_button()
+        status(dim(next_color(False)))
         animate(current_color)
         state = 'light'
         print("state = light")
         last_color = current_color
         current_color = next_color()
-        status(dim(current_color))
 
 
     elif state == 'light':
