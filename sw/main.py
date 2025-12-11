@@ -9,15 +9,15 @@ pixel_count = 74
 BUTTON_PRESSED = 0
 animate_delay = 0.015
 strip_pin = 2
-color = (0,0,1)
 purple = (128,0,128)
 blue = (0,0,255)
 red = (255,0,0)
 yellow = (200,120,0)
 green = (0,255,0)
+white = (100,100,100)
 
 color_index = 0
-colors = [blue, red, yellow, purple, green]
+colors = [blue, red, yellow, purple, green, white]
 
 current_color = colors[color_index]
 last_color = colors[len(colors)-1]
