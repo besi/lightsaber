@@ -1298,7 +1298,7 @@
 		)
 		(model "${KIPRJMOD}/lib/com-09806/com-09806.step"
 			(offset
-				(xyz 0 -1 0.25)
+				(xyz 0 -3 0.25)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -2056,6 +2056,17 @@
 				(xyz 0 0 0)
 			)
 		)
+		(model "${KIPRJMOD}/lib/JS102011SAQN.STEP"
+			(offset
+				(xyz 4.4 -2 0.25)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 180)
+			)
+		)
 	)
 	(footprint "pts636:pts636"
 		(layer "B.Cu")
@@ -2141,8 +2152,8 @@
 			(uuid "ff358476-1200-4bc0-be2b-e0e360341055")
 		)
 		(fp_line
-			(start 6.2 -1.75)
-			(end 0.2 -1.75)
+			(start 6.2 -4.5)
+			(end 0.2 -4.5)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -2216,7 +2227,7 @@
 		)
 		(model "${KIPRJMOD}/lib/pts636/pts636.step"
 			(offset
-				(xyz 3.25 -2.6 0.4)
+				(xyz 3.25 -4.6 0.5)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -2591,7 +2602,7 @@
 		)
 		(model "${KICAD8_3DMODEL_DIR}/OptoDevice.3dshapes/R_LDR_4.9x4.2mm_P2.54mm_Vertical.wrl"
 			(offset
-				(xyz 0 -1 0.3)
+				(xyz 0 1.5 0.3)
 			)
 			(scale
 				(xyz 1 1 1)
