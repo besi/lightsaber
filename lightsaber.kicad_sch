@@ -5,6 +5,108 @@
 	(uuid "be5e5df5-91f4-4b4d-9714-13949d1f37c8")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:Battery_Cell"
 			(pin_numbers hide)
 			(pin_names
@@ -2051,9 +2153,11 @@
 		(color 0 0 0 0)
 		(uuid "881a8bfa-e424-4866-aa05-5b3f3d9c209f")
 	)
-	(no_connect
-		(at 35.56 24.13)
-		(uuid "00deb7bd-f827-42de-af76-238015a094f7")
+	(junction
+		(at 40.64 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd9d3d11-2cd5-401b-bd69-ca25b7c7446d")
 	)
 	(no_connect
 		(at 140.97 58.42)
@@ -2072,8 +2176,20 @@
 		(uuid "2584b6b7-ff4d-4bdb-b3a1-d7a06160cf71")
 	)
 	(no_connect
+		(at 105.41 45.72)
+		(uuid "298512cc-4113-4591-bf8b-490fe390f7a5")
+	)
+	(no_connect
 		(at 105.41 55.88)
 		(uuid "2c8fd05f-a026-4653-befb-b7e26ff7f2ba")
+	)
+	(no_connect
+		(at 39.37 40.64)
+		(uuid "37106e1b-06f0-4ae9-bcd2-7e220e3c35c4")
+	)
+	(no_connect
+		(at 105.41 48.26)
+		(uuid "49a93013-d1dc-4035-a15e-78a9cdc5faa7")
 	)
 	(no_connect
 		(at 140.97 48.26)
@@ -2093,6 +2209,56 @@
 		)
 		(uuid "07e463b3-a149-488e-84ae-0f59e096c366")
 	)
+	(wire
+		(pts
+			(xy 26.67 58.42) (xy 26.67 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "729966b2-1a40-4843-81be-f68dbee0097e")
+	)
+	(wire
+		(pts
+			(xy 43.18 35.56) (xy 40.64 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7865e11b-2f5a-4a2e-b8be-84a4fe5e0a15")
+	)
+	(wire
+		(pts
+			(xy 40.64 29.21) (xy 40.64 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78c1ecce-39c7-4534-9077-4760c17f1a14")
+	)
+	(wire
+		(pts
+			(xy 39.37 35.56) (xy 40.64 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89aca850-5e44-4a03-afa4-47af352dfbbd")
+	)
+	(wire
+		(pts
+			(xy 26.67 38.1) (xy 29.21 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eddea6e1-5da0-4a6f-a7e1-2aa3b0ab2ebf")
+	)
 	(global_label "Light"
 		(shape input)
 		(at 67.31 30.48 180)
@@ -2106,28 +2272,6 @@
 		(uuid "00a670cf-4b7f-4925-84e1-c2d520febbc6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 59.6682 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Power"
-		(shape input)
-		(at 105.41 45.72 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0e82e1e4-e7c1-47d1-a12e-3b318d23fabd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.8005 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2203,6 +2347,28 @@
 			)
 		)
 	)
+	(global_label "VBAT"
+		(shape input)
+		(at 26.67 49.53 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "834e2bd5-ef55-4eab-b573-0089c17ce6f3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.27 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Button"
 		(shape input)
 		(at 68.58 81.28 0)
@@ -2243,28 +2409,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Power"
-		(shape input)
-		(at 35.56 29.21 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d6ef2ba9-9443-467f-9aa2-6136b1dc80e9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.1695 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -2382,6 +2526,73 @@
 	)
 	(symbol
 		(lib_id "power:+4V")
+		(at 43.18 35.56 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "094fb062-1e45-4e87-b77a-14c5f7d4a807")
+		(property "Reference" "#PWR03"
+			(at 39.37 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+4V"
+			(at 46.99 35.5599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+4V\""
+			(at 43.18 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec8eda96-a40e-46b4-b462-b0fb2303a046")
+		)
+		(instances
+			(project "lightsaber"
+				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+4V")
 		(at 59.69 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2441,72 +2652,6 @@
 			(project "lightsaber"
 				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
 					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+4V")
-		(at 26.67 58.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3825d186-0c3b-45ed-8e3b-ba42b82c8b37")
-		(property "Reference" "#PWR03"
-			(at 26.67 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+4V"
-			(at 26.67 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 26.67 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 26.67 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 26.67 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dec6d814-36ee-49f8-848a-e11c3576fa77")
-		)
-		(instances
-			(project ""
-				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2665,7 +2810,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100k"
 			(at 72.39 27.9399 0)
 			(effects
 				(font
@@ -3205,73 +3350,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+4V")
-		(at 105.41 48.26 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "83e890ae-fb5f-46cc-8942-95916bf8a1b9")
-		(property "Reference" "#PWR06"
-			(at 109.22 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+4V"
-			(at 101.6 48.2599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 105.41 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "12682bfe-a8ff-4652-89e1-f89d04a45446")
-		)
-		(instances
-			(project "lightsaber"
-				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 140.97 60.96 90)
 		(unit 1)
@@ -3333,73 +3411,6 @@
 			(project "lightsaber"
 				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 25.4 26.67 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8cb62b12-f6bc-4396-acc1-7083031a13d4")
-		(property "Reference" "#PWR015"
-			(at 29.21 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 21.59 26.6699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.4 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 25.4 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 25.4 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "57b7f526-ca77-4b6c-a58f-87a92bfe2d23")
-		)
-		(instances
-			(project "lightsaber"
-				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
-					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -3474,16 +3485,16 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 30.48 26.67 0)
+		(at 34.29 38.1 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "96f21ffa-dda7-4a50-bae8-d38d7cd57fa7")
-		(property "Reference" "SW3"
-			(at 30.48 17.78 0)
+		(property "Reference" "SW2"
+			(at 34.29 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3491,15 +3502,15 @@
 			)
 		)
 		(property "Value" "POWER"
-			(at 30.48 20.32 0)
+			(at 34.29 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "as12ap:as12ap"
-			(at 30.48 26.67 0)
+		(property "Footprint" "Button_Switch_SMD:SW_SPDT_CK_JS102011SAQN"
+			(at 34.29 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3508,7 +3519,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 30.48 26.67 0)
+			(at 34.29 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3517,7 +3528,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 30.48 26.67 0)
+			(at 34.29 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3537,7 +3548,7 @@
 		(instances
 			(project "lightsaber"
 				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
-					(reference "SW3")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -3807,6 +3818,73 @@
 			(project ""
 				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
 					(reference "BT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 40.64 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd2f3d2d-6424-41e9-8ad2-df3e12e3321a")
+		(property "Reference" "TP1"
+			(at 43.18 24.6379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TO-BAT"
+			(at 43.18 27.1779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
+			(at 45.72 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 40.64 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b169c0d7-5ee0-415a-a0a8-6ec0371ad4a2")
+		)
+		(instances
+			(project ""
+				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
