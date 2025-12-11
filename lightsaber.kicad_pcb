@@ -2943,14 +2943,6 @@
 		(uuid "6cdc224e-3026-4cc9-91e2-0e30cfd1cc25")
 	)
 	(segment
-		(start 116.944 48.65)
-		(end 116.944 39)
-		(width 1)
-		(layer "B.Cu")
-		(net 3)
-		(uuid "b306c6da-047e-4287-b987-2eaf82bf7b25")
-	)
-	(segment
 		(start 109.687716 146.23)
 		(end 112.82 143.097716)
 		(width 0.6)
