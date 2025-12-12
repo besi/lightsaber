@@ -1,14 +1,14 @@
 import machine
-adc = machine.ADC(0)
 import time
-from machine import Pin, PWM
+from machine import Pin, ADC
 from neopixel import NeoPixel
 from time import sleep
 
 pixel_count = 74
 BUTTON_PRESSED = 0
-animate_delay = 0.015
+animate_delay = 0.008
 strip_pin = 2
+
 purple = (128,0,128)
 blue = (0,0,255)
 red = (255,0,0)
@@ -26,6 +26,7 @@ np = NeoPixel(Pin(strip_pin), pixel_count)
 np1 = NeoPixel(Pin(7),1) 
 button = Pin(4, Pin.IN, Pin.PULL_UP)
 
+adc = ADC(Pin(1))
 
 def next_color(store = True):
     global color_index
@@ -35,11 +36,14 @@ def next_color(store = True):
     if store:
         color_index = index
     return colors[index]
-    
+
+def dim_factor():
+    return int(adc.read() * 30 / 4095) + 1
     
 def clear(fade = False):
     if fade:
         c = last_color
+        c = dim(c, dim_factor())
         for x in range(max(c)+1):
             n = ((max(c[0] - x,0), max(c[1] - x, 0), max(c[2] - x, 0) ))
             np.fill(n)
@@ -52,9 +56,10 @@ def clear(fade = False):
 
 
 def animate(c):
+    color = dim(c, dim_factor())
     for x in range(pixel_count - 1):
-        np[x] = c
-        np[pixel_count -1 - x] = c
+        np[x] = color
+        np[pixel_count -1 - x] = color
         np.write()
         sleep(animate_delay)
         
@@ -62,8 +67,7 @@ def wait_for_button():
     while button() != BUTTON_PRESSED:
         sleep(.01)
 
-def dim(c):
-    f = 100
+def dim(c, f=100):
     return (( max(int(c[0]/f),0), max(int(c[1]/f),0), max(int(c[2]/f),0) ))
  
 def swap(c):
