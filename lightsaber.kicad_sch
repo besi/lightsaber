@@ -2807,7 +2807,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "47k"
 			(at 72.39 27.9399 0)
 			(effects
 				(font
@@ -3018,7 +3018,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OptoDevice:R_LDR_4.9x4.2mm_P2.54mm_Vertical"
+		(property "Footprint" "OptoDevice:R_LDR_5.1x4.3mm_P3.4mm_Vertical"
 			(at 74.295 34.29 90)
 			(effects
 				(font
