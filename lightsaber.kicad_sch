@@ -400,6 +400,88 @@
 				)
 			)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "Sensor_Optical:VT93xx"
 			(pin_numbers hide)
 			(pin_names
@@ -2301,7 +2383,7 @@
 	)
 	(global_label "Light"
 		(shape input)
-		(at 105.41 60.96 180)
+		(at 105.41 58.42 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2311,7 +2393,7 @@
 		)
 		(uuid "7845c482-10fa-411d-b26b-ce517ed54ec0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 97.7682 60.96 0)
+			(at 97.7682 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2323,7 +2405,7 @@
 	)
 	(global_label "Poti"
 		(shape input)
-		(at 105.41 53.34 180)
+		(at 105.41 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2333,7 +2415,7 @@
 		)
 		(uuid "81651dee-942f-4f80-86d1-4e6cf05462b1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.6753 53.34 0)
+			(at 98.6753 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2389,7 +2471,7 @@
 	)
 	(global_label "Button"
 		(shape input)
-		(at 105.41 58.42 180)
+		(at 105.41 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2399,7 +2481,7 @@
 		)
 		(uuid "bfda4f3b-9a2d-466b-acf4-affe3394364e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.2564 58.42 0)
+			(at 96.2564 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2790,7 +2872,8 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 69.85 26.67 0)
+		(at 69.85 34.29 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2799,7 +2882,7 @@
 		(fields_autoplaced yes)
 		(uuid "54d2ad4b-0604-4e96-8c05-6618260e10c8")
 		(property "Reference" "R3"
-			(at 72.39 25.3999 0)
+			(at 72.39 35.5601 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2808,7 +2891,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 72.39 27.9399 0)
+			(at 72.39 33.0201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2817,7 +2900,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 68.072 26.67 90)
+			(at 68.072 34.29 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2826,7 +2909,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 69.85 26.67 0)
+			(at 69.85 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2835,7 +2918,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 69.85 26.67 0)
+			(at 69.85 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2925,6 +3008,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 99.06 78.74 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60fc0dcc-3940-4c18-9d9a-b51a21e4ee30")
+		(property "Reference" "H1"
+			(at 101.6 77.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 101.6 80.0099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 99.06 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 99.06 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 91.44 22.86 0)
 		(unit 1)
@@ -2992,7 +3139,8 @@
 	)
 	(symbol
 		(lib_id "Sensor_Optical:VT93xx")
-		(at 69.85 34.29 0)
+		(at 69.85 26.67 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3001,7 +3149,7 @@
 		(fields_autoplaced yes)
 		(uuid "6a02233d-51d4-412d-9b1f-a6372df7f37d")
 		(property "Reference" "R1"
-			(at 72.39 33.0199 0)
+			(at 72.39 27.9401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3010,7 +3158,7 @@
 			)
 		)
 		(property "Value" "VT93xx"
-			(at 72.39 35.5599 0)
+			(at 72.39 25.4001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3019,7 +3167,7 @@
 			)
 		)
 		(property "Footprint" "OptoDevice:R_LDR_5.1x4.3mm_P3.4mm_Vertical"
-			(at 74.295 34.29 90)
+			(at 74.295 26.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3028,7 +3176,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.produktinfo.conrad.com/datenblaetter/125000-149999/140375-da-01-en-FOTOWIDERSTAND__VT_93_N2__THT_.pdf"
-			(at 69.85 35.56 0)
+			(at 69.85 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3037,7 +3185,7 @@
 			)
 		)
 		(property "Description" "light dependent resistor"
-			(at 69.85 34.29 0)
+			(at 69.85 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3269,6 +3417,70 @@
 			(project ""
 				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 99.06 83.82 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "793dd075-0405-43f2-b9d4-18f7c3d59e6c")
+		(property "Reference" "H2"
+			(at 101.6 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 101.6 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 99.06 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 99.06 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "lightsaber"
+				(path "/be5e5df5-91f4-4b4d-9714-13949d1f37c8"
+					(reference "H2")
 					(unit 1)
 				)
 			)
