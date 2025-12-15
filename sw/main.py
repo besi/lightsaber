@@ -4,10 +4,12 @@ from machine import Pin, ADC
 from neopixel import NeoPixel
 from time import sleep
 
-pixel_count = 74
+pixel_count = 48 # was 74
 BUTTON_PRESSED = 0
 animate_delay = 0.008
 strip_pin = 2
+button_pin = 5 # was 4
+poti_pin = 1 # was 1
 
 purple = (128,0,128)
 blue = (0,0,255)
@@ -24,9 +26,9 @@ last_color = colors[len(colors)-1]
 
 np = NeoPixel(Pin(strip_pin), pixel_count)
 np1 = NeoPixel(Pin(7),1) 
-button = Pin(4, Pin.IN, Pin.PULL_UP)
+button = Pin(button_pin, Pin.IN, Pin.PULL_UP)
 
-adc = ADC(Pin(1))
+poti = ADC(poti_pin)
 
 def next_color(store = True):
     global color_index
@@ -38,7 +40,7 @@ def next_color(store = True):
     return colors[index]
 
 def dim_factor():
-    return int(adc.read() * 30 / 4095) + 1
+    return int(poti.read() * 30 / 4095) + 1
     
 def clear(fade = False):
     if fade:
