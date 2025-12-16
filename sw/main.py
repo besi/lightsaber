@@ -46,7 +46,7 @@ def next_color(store = True):
     return colors[index]
 
 def dim_factor():
-    return int(poti.read() * 30 / 4095) + 1
+    return int(poti.read() * 77 / 4095) + 1
     
 def clear(fade = False):
     if fade:
