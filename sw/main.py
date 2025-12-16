@@ -4,11 +4,17 @@ from machine import Pin, ADC
 from neopixel import NeoPixel
 from time import sleep
 
-pixel_count = 48 # was 74
+
+pixel_count = 48
+button_pin = 5
+
+if machine.unique_id().hex() == '68b6b3bc4128':
+    pixel_count = 74
+    button_pin = 4
+
 PRESSED = 0
 animate_delay = 0.008
 strip_pin = 2
-button_pin = 5 # was 4
 poti_pin = 1
 
 purple = (128,0,128)
