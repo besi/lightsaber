@@ -5,11 +5,11 @@ from neopixel import NeoPixel
 from time import sleep
 
 pixel_count = 48 # was 74
-BUTTON_PRESSED = 0
+PRESSED = 0
 animate_delay = 0.008
 strip_pin = 2
 button_pin = 5 # was 4
-poti_pin = 1 # was 1
+poti_pin = 1
 
 purple = (128,0,128)
 blue = (0,0,255)
@@ -56,17 +56,23 @@ def clear(fade = False):
         np.write()
         np1.write()
 
-
-def animate(c):
+        
+def show(c, animated = True):
     color = dim(c, dim_factor())
-    for x in range(pixel_count - 1):
-        np[x] = color
-        np[pixel_count -1 - x] = color
+    brightness = dim_factor()
+    if animated:
+        for x in range(pixel_count - 1):
+            np[x] = color
+            np[pixel_count -1 - x] = color
+            np.write()
+            sleep(animate_delay)
+    else:
+        np.fill(color)
         np.write()
-        sleep(animate_delay)
+
         
 def wait_for_button():
-    while button() != BUTTON_PRESSED:
+    while button() != PRESSED:
         sleep(.01)
 
 def dim(c, f=100):
@@ -83,21 +89,26 @@ clear()
 state = 'start'
 status(dim(current_color))
 
+
 while True:
+    
     if state == 'start':
         wait_for_button()
         status(dim(next_color(False)))
-        animate(current_color)
+        show(current_color)
         state = 'light'
         print("state = light")
         last_color = current_color
-        current_color = next_color()
-
 
     elif state == 'light':
-        wait_for_button()
-        clear(True)
-        state = 'start'
-        print("state = start")
-        sleep(.2)
+        if button() != PRESSED:
+            show(current_color, False)
+        elif button() == PRESSED:
+            clear(True)
+            state = 'start'
+            print("state = start")
+            current_color = next_color(True)
+
+            sleep(.2)
     sleep(.1)
+
