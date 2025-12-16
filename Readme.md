@@ -1,5 +1,7 @@
 # Lightsaber
 
+This is my lightsaber featuring a custom made PCB and as Neopixel strip.
+
 ![](lightsaber.png)
 
 
@@ -17,3 +19,7 @@
 
 \* This is a GRB instead of RGB LED
 \** This requires a solder jumper on the back of the C3 board
+
+## Credits
+
+- 3D model of the 18650 battery by John Michael Loeffler
