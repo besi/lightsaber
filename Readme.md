@@ -14,11 +14,11 @@ This is my lightsaber featuring a custom made PCB and as Neopixel strip.
 | Internal RGB*     |   7 |
 | Potentiometer     |   1 |
 | Batteryvoltage**  |   3 |
-| Ambient light     |   0 |
 
 
 \* This is a GRB instead of RGB LED
 \** This requires a solder jumper on the back of the C3 board
+
 
 ## Credits
 
