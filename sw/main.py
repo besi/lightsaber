@@ -20,9 +20,9 @@ poti_pin = 1
 purple = (128,0,128)
 blue = (0,0,255)
 red = (255,0,0)
-yellow = (200,120,0)
+yellow = (150,105,0)
 green = (0,255,0)
-white = (100,100,100)
+white = (85,85,85)
 
 color_index = 0
 colors = [blue, red, yellow, purple, green, white]
