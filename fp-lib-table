@@ -1,0 +1,8 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "c3-pico")(type "KiCad")(uri "${KIPRJMOD}/lib/c3-pico/c3-pico.pretty")(options "")(descr ""))
+  (lib (name "pts636")(type "KiCad")(uri "${KIPRJMOD}/lib/pts636/pts636.pretty")(options "")(descr ""))
+  (lib (name "com-09806")(type "KiCad")(uri "${KIPRJMOD}/lib/com-09806/com-09806.pretty")(options "")(descr ""))
+  (lib (name "as12ap")(type "KiCad")(uri "${KIPRJMOD}/lib/as12ap/as12ap.pretty")(options "")(descr ""))
+  (lib (name "neopixel-strip")(type "KiCad")(uri "${KIPRJMOD}/lib/neopixel-strip/neopixel-strip.pretty")(options "")(descr ""))
+)
