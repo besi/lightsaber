@@ -16,7 +16,7 @@ This is my lightsaber featuring a custom made PCB and as Neopixel strip.
 | Batteryvoltage**  |   3 |
 
 
-\* This is a GRB instead of RGB LED
+\* This is a GRB instead of RGB LED  
 \** This requires a solder jumper on the back of the C3 board
 
 
