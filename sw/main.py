@@ -17,6 +17,11 @@ animate_delay = 0.008
 strip_pin = 2
 poti_pin = 1
 
+np = NeoPixel(Pin(strip_pin), pixel_count)
+np1 = NeoPixel(Pin(7),1) 
+button = Pin(button_pin, Pin.IN, Pin.PULL_UP)
+poti = ADC(poti_pin)
+
 purple = (128,0,128)
 blue = (0,0,255)
 red = (255,0,0)
@@ -30,11 +35,6 @@ colors = [blue, red, yellow, purple, green, white]
 current_color = colors[color_index]
 last_color = colors[len(colors)-1]
 
-np = NeoPixel(Pin(strip_pin), pixel_count)
-np1 = NeoPixel(Pin(7),1) 
-button = Pin(button_pin, Pin.IN, Pin.PULL_UP)
-
-poti = ADC(poti_pin)
 
 def next_color(store = True):
     global color_index
